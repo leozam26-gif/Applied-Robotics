@@ -8,7 +8,7 @@
 - **Team / Author(s):** Leonardo Zamora Hernández  
 - **Course / Subject:** Applied Robotics  
 - **Date:** _29/01/2026_  
-- **Brief Description:** _Real life examples of robots with different morphologies_
+- **Brief Description:** _Translation and rotation of a vector_
 
 ---
 
