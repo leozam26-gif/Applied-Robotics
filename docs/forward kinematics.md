@@ -147,7 +147,7 @@ disp(T_0_N);
 
 ### Original problem image:
 
-<img src="recursos/imgs/E1.png" alt="1st exercise" width="800" allign=center>
+<img src="../recursos/imgs/E1.png" alt="1st exercise" width="800" allign=center>
 
 ### Result (planes, origins, axis, links):
 
