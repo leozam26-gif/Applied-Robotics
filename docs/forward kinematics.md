@@ -12,7 +12,7 @@
 
 ---
 
-[Home](../index.md)
+
 
 # Forward Kinematics
 
