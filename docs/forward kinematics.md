@@ -151,7 +151,7 @@ disp(T_0_N);
 
 ### Result (planes, origins, axis, links):
 
-<img src="recursos/imgs/S1.png" alt="1st solution" width="800" allign=center>
+<img src="../recursos/imgs/S1.png" alt="1st solution" width="800" allign=center>
 
 ### Data table
 
@@ -286,11 +286,11 @@ $$
 
 ### Original problem image:
 
-<img src="recursos/imgs/E2.png" alt="2nd exercise" width="800" allign=center>
+<img src="../recursos/imgs/E2.png" alt="2nd exercise" width="800" allign=center>
 
 ### Result (planes, origins, axis, links):
 
-<img src="recursos/imgs/S2.png" alt="2nd solution" width="800" allign=center>
+<img src="../recursos/imgs/S2.png" alt="2nd solution" width="800" allign=center>
 
 ### Data table
 
@@ -406,11 +406,11 @@ T_{0N}=
 
 ### Original problem image:
 
-<img src="recursos/imgs/E3.png" alt="3rd exercise" width="800" allign=center>
+<img src="../recursos/imgs/E3.png" alt="3rd exercise" width="800" allign=center>
 
 ### Result (planes, origins, axis, links):
 
-<img src="recursos/imgs/S3.png" alt="3rd solution" width="800" allign=center>
+<img src="../recursos/imgs/S3.png" alt="3rd solution" width="800" allign=center>
 
 ### Data table
 
@@ -584,11 +584,11 @@ T_{0N}=
 
 ### Original problem image:
 
-<img src="recursos/imgs/E4.png" alt="4th exercise" width="800" allign=center>
+<img src="../recursos/imgs/E4.png" alt="4th exercise" width="800" allign=center>
 
 ### Result (planes, origins, axis, links):
 
-<img src="recursos/imgs/S4.png" alt="4th solution" width="800" allign=center>
+<img src="../recursos/imgs/S4.png" alt="4th solution" width="800" allign=center>
 
 ### Data table
 
@@ -762,11 +762,11 @@ T_{0N}=
 
 ### Original problem image:
 
-<img src="recursos/imgs/E5.png" alt="5th exercise" width="800" allign=center>
+<img src="../recursos/imgs/E5.png" alt="5th exercise" width="800" allign=center>
 
 ### Result (planes, origins, axis, links):
 
-<img src="recursos/imgs/S5.png" alt="5th solution" width="800" allign=center>
+<img src="../recursos/imgs/S5.png" alt="5th solution" width="800" allign=center>
 
 ### Data table
 
