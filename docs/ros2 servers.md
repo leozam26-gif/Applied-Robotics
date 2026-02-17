@@ -10,10 +10,15 @@
 * **Team / Author(s):** Leonardo Zamora Hernández
 * **Course / Subject:** Applied Robotics
 * **Date:** *16/02/2026*
-* **Brief Description:** *Implementation of a Service Server within a node to reset a counter variable using the `example_interfaces/srv/SetBool` interface.*
+* **Brief Description:** *Implementation of a Service Server within a node to reset a counter variable.*
 
 ---
-
+    Add a functionality to reset the counter to zero: 
+- Create a service server inside the “number_counter” node. 
+- Service name: “/reset_counter” 
+- Service type: example_interfaces/srv/SetBool. Use “ros2 interface show” to discover what’s inside! 
+- When the server is called, check the boolean data from the request. If true, set the counter variable to 0. 
+---
 ## 2) Publisher Node
 
 * **Number Publisher Code**
@@ -63,11 +68,44 @@ ros2 run my_rbt_pkg number_publisher
 
 ```
 
-* **Execution Evidence:**
+* **Execution:**
+![3D Printer](recursos/imgs/publisher_ser.jpg)
+---
+## 3)  Service Server
+This is an example on how to create a server:
+```python
+import rclpy
+from rclpy.node import Node
+from loes_interfaces.srv import Multiply
 
+class Add2Ints_server(Node): # MODIFY NAME
+    def __init__(self):
+        super().__init__("add_two_ints_server") # MODIFY NAME
+        self.server_ = self.create_service(Multiply, # SERVICE TYPE
+                                           "multiply", # SERVICE NAME
+                                           self.add_2ints_callback) # CALLBACK FUNCTION
+        self.get_logger().info("Service add_two_ints has been started.")
+
+    def add_2ints_callback(self, request: Multiply.Request, response: Multiply.Response):
+        #compute the sum of the two intwgresrs
+        response.result = request.x + request.y
+        self.get_logger().info(f"Incoming request: a={request.x}, b={request.y}, sum{response.result}")
+        return response
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    my_node = Add2Ints_server() # MODIFY NAME
+    rclpy.spin(my_node)
+    rclpy.shutdown()
+
+if __name__ == "__main__":
+    main()
+
+```
 ---
 
-## 3) Subscriber & Service Server
+## 4) Subscriber & Service Server
 
 * **Number Counter Code**
 This node subscribes to `/number` to increment a counter. It also hosts a service server named `/reset_counter` that resets the count to 0 when called.
@@ -137,11 +175,12 @@ ros2 run my_rbt_pkg number_counter
 
 ```
 
-* **Execution Evidence:**
+* **Execution:**
 
+![3D Printer](recursos/imgs/counter_ser.jpg)
 ---
 
-## 4) Communication & Service Call
+## 5) Communication & Service Call
 
 * **Testing the Service**
 To test the functionality, we call the `/reset_counter` service from the terminal using the `SetBool` interface. We send `data: true` to trigger the reset logic defined in the server callback.
@@ -154,5 +193,23 @@ ros2 service call /reset_counter example_interfaces/srv/SetBool "{data: true}"
 
 ```
 
+
+* **Execution:**
+
+![3D Printer](recursos/imgs/reset_ser.jpg)
+
 * **Verification:**
 *The service returns success=True and the message "Counter has been reset to zero."*
+
+* **Monitoring:**
+
+![3D Printer](recursos/imgs/monitor_ser.jpg)
+
+The command to monitor the counter is:
+```bash
+ros2 topic echo /number_count
+```
+
+* **Nodes graph:**
+
+![3D Printer](recursos/imgs/node_graph_ser.jpg)
