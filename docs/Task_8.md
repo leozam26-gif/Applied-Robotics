@@ -846,4 +846,6 @@ This is the results while running the 4 terminals.
 
 ![WIP](../recursos/imgs/Task_8/turtles_result.jpeg)
 
-[WIP](../recursos/imgs/Task_8/turtle.mp4)
+<video src="../recursos/imgs/Task_8/turtle.mp4" controls width="100%">
+<code>video</code>.
+</video>
