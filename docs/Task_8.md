@@ -813,3 +813,35 @@ Here is how it looks
 ## 10.- Results (Terminal and rqt_graph)
 
 Once the nodes are finished we can open with the launch line or we will open 4 ubuntu terminals in this order
+
+1. Run turtle sim.
+
+```bash
+ros2 run turtlesim turtlesim_node
+```
+
+2. Run the spawner.
+
+```bash
+ros2 run myrobot_pkg turtle_spawner
+```
+
+3. Run the controller.
+
+```bash
+ros2 run myrobot_pkg turtle_controller
+```
+
+4. Graph
+
+```bash
+rqt_graph
+```
+
+Now when we run first 2 nodes, the turtle sim terminal appears with new information about the turtles spawned.
+
+![WIP](../recursos/imgs/Task_8/turtles_spawned.jpeg)
+
+This is the results while running the 4 terminals.
+
+![WIP](../recursos/imgs/Task_8/turtles_result.jpeg)
