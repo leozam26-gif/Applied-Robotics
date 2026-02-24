@@ -845,3 +845,5 @@ Now when we run first 2 nodes, the turtle sim terminal appears with new informat
 This is the results while running the 4 terminals.
 
 ![WIP](../recursos/imgs/Task_8/turtles_result.jpeg)
+
+![WIP](../recursos/imgs/Task_8/turtle.mp4)
