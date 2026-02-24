@@ -847,5 +847,6 @@ This is the results while running the 4 terminals.
 ![WIP](../recursos/imgs/Task_8/turtles_result.jpeg)
 
 <video controls width="100%">
-  <source src="/recursos/imgs/Task_8/turtle.mp4" type="video/mp4">
+  <source src="https://raw.githubusercontent.com/leozam26-gif/Applied-Robotics/main/recursos/imgs/Task_8/turtle.mp4" type="video/mp4">
+  Tu navegador no soporta el video.
 </video>
