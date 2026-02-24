@@ -117,7 +117,7 @@ For calling this node we will put on the ubuntu terminal the next:
 ros2 run turtlesim turtlesim_node
 ```
 
-![WIP](../recursos/imgs/Task_8/turtleism.jpeg)
+![WIP](../recursos/imgs/Task_8/turtlesim.jpeg)
 
 ## 3.- msg and srv files (interfaces)
 
@@ -788,39 +788,28 @@ Add the 2 names of the nodes that had been created on the **entry_point**
 'turtle_controller= myrobot_pkg.turtle_controller:main',
             'turtle_spawner= myrobot_pkg.turtle_spawner:main',
 ```
+## 9.- Launch the 3 nodes
 
-## 9.- Results (Terminal and rqt_graph)
+For this part we will have to create another package, then in the folder **launch**  you will find create a file **xml** ours will be called **app_launch.xml** and then add on which node is the code and the name of your node.
 
-Once the nodes aere finish we need to open 4 ubuntu terminals in this order
-
-1. Run turtle sim.
+```xml
+<launch>
+    <node pkg="turtlesim" exec="turtlesim_node"/>
+    <node pkg="myrobot_pkg" exec="turtle_controller"/>
+    <node pkg="myrobot_pkg" exec="turtle_spawner"/>
+</launch>
+```
+Then you will have to save and colcon build, we will launch our 3 nodes with this line
 
 ```bash
-ros2 run turtlesim turtlesim_node
+ros2 launch myrobot_bringup app_launch.xml
 ```
 
-2. Run the spawner.
+Here is how it looks
 
-```bash
-ros2 run myrobot_pkg turtle_spawner
-```
+![WIP](../recursos/imgs/Task_8/launchjpg.jpg)
 
-3. Run the controller.
 
-```bash
-ros2 run myrobot_pkg turtle_controller
-```
+## 10.- Results (Terminal and rqt_graph)
 
-4. Graph
-
-```bash
-rqt_graph
-```
-
-Now when we run first 2 nodes, the turtle sim terminal appears with new information about the turtles spawned.
-
-![WIP](../recursos/imgs/Task_8/turtles_spawned.jpeg)
-
-This the reuslt while running the 4 terminals.
-
-![WIP](../recursos/imgs/Task_8/turtles_result.jpeg)
+Once the nodes are finished we can open with the launch line or we will open 4 ubuntu terminals in this order
