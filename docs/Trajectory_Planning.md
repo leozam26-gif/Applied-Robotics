@@ -42,4 +42,4 @@ This documentation covers the fundamental concepts of joint-space trajectory gen
 * **Comparison:**
     * **Triangular:** Requires higher peak velocity ($v_p = 2$ rad/s) and higher acceleration.
     * **Trapezoidal ($t_a = 0.5$s):** Provides a smoother transition with $v_{max} = 1.2$ rad/s.
-* **Conclusion:** The trapezoidal profile is preferred for the XAVIMATRONIC actuators as it reduces mechanical jerk and motor stress.
+* **Conclusion:** The trapezoidal profile is preferred as it reduces mechanical jerk and motor stress.
